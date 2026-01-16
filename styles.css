@@ -154,7 +154,8 @@ body {
   align-items: center;
   padding: 100px 20px 50px;
   position: relative;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       ellipse at 80% 20%,
       rgba(0, 255, 136, 0.1) 0%,
       transparent 50%
@@ -732,6 +733,125 @@ section {
 
 .event-stats i {
   color: var(--primary-color);
+}
+
+/* ===== Certifications Section ===== */
+.certifications {
+  padding: 100px 0;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.cert-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-glow);
+}
+
+.cert-card.obtained {
+  border-left: 4px solid var(--primary-color);
+}
+
+.cert-card.in-progress {
+  border-left: 4px solid var(--accent-color);
+}
+
+.cert-badge {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.cert-card.obtained .cert-badge {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 136, 0.2) 0%,
+    rgba(0, 212, 255, 0.2) 100%
+  );
+  color: var(--primary-color);
+}
+
+.cert-card.in-progress .cert-badge {
+  background: linear-gradient(
+    135deg,
+    rgba(88, 166, 255, 0.2) 0%,
+    rgba(118, 75, 162, 0.2) 100%
+  );
+  color: var(--accent-color);
+}
+
+.cert-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.cert-info p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cert-info p i {
+  color: var(--primary-color);
+  width: 16px;
+}
+
+.cert-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.cert-status.obtained {
+  background: rgba(0, 255, 136, 0.15);
+  color: var(--primary-color);
+}
+
+.cert-status.in-progress {
+  background: rgba(88, 166, 255, 0.15);
+  color: var(--accent-color);
+}
+
+.cert-status.in-progress i {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ===== Achievements Section ===== */
