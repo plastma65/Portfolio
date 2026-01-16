@@ -65,7 +65,7 @@ const observer = new IntersectionObserver((entries) => {
 // Add animation classes to elements
 document
   .querySelectorAll(
-    ".skill-category, .achievement-card, .event-card, .highlight-item, .contact-link"
+    ".skill-category, .achievement-card, .event-card, .highlight-item, .contact-link",
   )
   .forEach((el) => {
     el.style.opacity = "0";
@@ -184,7 +184,7 @@ contactForm.addEventListener("submit", (e) => {
   // Here you would typically send the data to a server
   // For now, we'll just show an alert
   alert(
-    `Cảm ơn ${name}! Tin nhắn của bạn đã được gửi.\n\nTôi sẽ phản hồi sớm nhất có thể.`
+    `Cảm ơn ${name}! Tin nhắn của bạn đã được gửi.\n\nTôi sẽ phản hồi sớm nhất có thể.`,
   );
 
   // Reset form
@@ -221,7 +221,7 @@ const statsObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 },
 );
 
 document.querySelectorAll(".stat-card").forEach((card) => {
@@ -241,13 +241,13 @@ window.addEventListener("scroll", () => {
 // ===== Console Easter Egg =====
 console.log(
   "%c🔐 Welcome to Vui's Portfolio!",
-  "font-size: 20px; font-weight: bold; color: #00ff88;"
+  "font-size: 20px; font-weight: bold; color: #00ff88;",
 );
 console.log(
   "%cInterested in cybersecurity? Let's connect!",
-  "font-size: 14px; color: #58a6ff;"
+  "font-size: 14px; color: #58a6ff;",
 );
 console.log(
   "%c💻 Always learning, always hacking (ethically)!",
-  "font-size: 12px; color: #8b949e;"
+  "font-size: 12px; color: #8b949e;",
 );

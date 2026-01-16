@@ -742,8 +742,14 @@ section {
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cert-card {
@@ -752,9 +758,11 @@ section {
   border-radius: 15px;
   padding: 30px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 25px;
   transition: all 0.3s ease;
+  min-height: 180px;
 }
 
 .cert-card:hover {
