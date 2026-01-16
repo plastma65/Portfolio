@@ -90,7 +90,18 @@ const modalImg = document.getElementById("modalImage");
 const modalCaption = document.getElementById("modalCaption");
 const closeModal = document.querySelector(".modal-close");
 
+// Modal for achievement images
 document.querySelectorAll(".achievement-image").forEach((img) => {
+  img.addEventListener("click", () => {
+    modal.classList.add("active");
+    modalImg.src = img.querySelector("img").src;
+    modalCaption.textContent = img.querySelector("img").alt;
+    document.body.style.overflow = "hidden";
+  });
+});
+
+// Modal for certification images
+document.querySelectorAll(".cert-image").forEach((img) => {
   img.addEventListener("click", () => {
     modal.classList.add("active");
     modalImg.src = img.querySelector("img").src;
