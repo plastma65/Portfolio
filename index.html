@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trần Tuấn Anh - Cybersecurity Portfolio</title>
+    <meta name="description" content="Trần Tuấn Anh - Cybersecurity Intern Portfolio | CTF Player | OSINT Specialist | HTB Enthusiast" />
+    <title>Trần Tuấn Anh — Cybersecurity Portfolio</title>
+    <link rel="icon" type="image/png" href="images/User_Avata.png" />
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -15,20 +17,20 @@
     />
   </head>
   <body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix"></canvas>
+
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
         <a href="#" class="nav-logo">
-          <span class="logo-bracket">&lt;</span>Tuấn Anh<span
-            class="logo-bracket"
-            >/&gt;</span
-          >
+          <span class="logo-bracket">&lt;</span>Tuấn Anh<span class="logo-bracket">/&gt;</span>
         </a>
         <ul class="nav-menu">
           <li><a href="#about" class="nav-link">Về tôi</a></li>
           <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
           <li><a href="#ctf" class="nav-link">CTF</a></li>
-          <li><a href="#learning" class="nav-link">Học tập</a></li>
+          <li><a href="#learning" class="nav-link">HTB Academy</a></li>
           <li><a href="#certifications" class="nav-link">Chứng chỉ</a></li>
           <li><a href="#achievements" class="nav-link">Thành tựu</a></li>
           <li><a href="#contact" class="nav-link">Liên hệ</a></li>
@@ -55,22 +57,18 @@
             <div class="terminal-body">
               <p class="typing-text"><span class="prompt">$</span> whoami</p>
               <h1 class="hero-title">Trần Tuấn Anh</h1>
-              <p class="typing-text">
-                <span class="prompt">$</span> cat role.txt
-              </p>
-              <h2 class="hero-subtitle">Cyber Security Intern</h2>
-              <p class="typing-text">
-                <span class="prompt">$</span> cat location.txt
-              </p>
+              <p class="typing-text"><span class="prompt">$</span> cat role.txt</p>
+              <h2 class="hero-subtitle">Cyber Security Intern<span class="cursor"></span></h2>
+              <p class="typing-text"><span class="prompt">$</span> cat location.txt</p>
               <p class="hero-location">
                 <i class="fas fa-map-marker-alt"></i> TP Hồ Chí Minh, Việt Nam
               </p>
             </div>
           </div>
           <p class="hero-description">
-            Sinh viên năm cuối Công nghệ Thông tin tại Đại học Công nghệ Sài Gòn
-            (STU), đam mê bảo mật mạng, chuyên về OSINT và CTF challenges. Đang
-            tìm kiếm vị trí thực tập Cyber Security Intern.
+            Sinh viên năm cuối Công nghệ Thông tin tại Đại học Công nghệ Sài Gòn (STU),
+            đam mê bảo mật mạng, chuyên về OSINT và CTF challenges. Đang tìm kiếm vị trí
+            thực tập Cyber Security Intern.
           </p>
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary">
@@ -83,63 +81,51 @@
         </div>
         <div class="hero-image">
           <div class="avatar-container">
-            <img
-              src="images/User_Avata.png"
-              alt="Trần Tuấn Anh Avatar"
-              class="avatar"
-            />
+            <img src="images/User_Avata.png" alt="Trần Tuấn Anh Avatar" class="avatar" />
             <div class="avatar-glow"></div>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+      <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section class="about" id="about">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title reveal">
           <span class="title-icon"><i class="fas fa-user-secret"></i></span>
           Về tôi
         </h2>
-        <div class="about-content">
+        <div class="about-content reveal">
           <div class="about-text">
             <p>
-              Xin chào! Tôi là <strong>Trần Tuấn Anh</strong>, sinh viên năm
-              cuối chuyên ngành <strong>Công nghệ Thông tin</strong> tại
-              <strong>Trường Đại học Công nghệ Sài Gòn (STU)</strong> với niềm
-              đam mê mãnh liệt về <strong>Bảo mật mạng (Cybersecurity)</strong>.
+              Xin chào! Tôi là <strong>Trần Tuấn Anh</strong>, sinh viên năm cuối chuyên ngành
+              <strong>Công nghệ Thông tin</strong> tại
+              <strong>Trường Đại học Công nghệ Sài Gòn (STU)</strong> với niềm đam mê mãnh liệt về
+              <strong>Bảo mật mạng (Cybersecurity)</strong>.
             </p>
             <p>
-              Tôi bắt đầu hành trình trong lĩnh vực bảo mật thông qua các cuộc
-              thi <strong>Capture The Flag (CTF)</strong>, nơi tôi đã rèn luyện
-              và phát triển kỹ năng về điều tra số (OSINT), phân tích mã độc, và
-              tư duy giải quyết vấn đề.
+              Tôi bắt đầu hành trình trong lĩnh vực bảo mật thông qua các cuộc thi
+              <strong>Capture The Flag (CTF)</strong>, nơi tôi rèn luyện và phát triển kỹ năng về
+              điều tra số (OSINT), phân tích mã độc, và tư duy giải quyết vấn đề.
             </p>
             <p>
               Với kinh nghiệm tham gia các cuộc thi CTF quốc tế như
               <strong>Cyber Apocalypse CTF 2025: Tales from Eldoria</strong>,
-              tôi đã chứng minh khả năng làm việc dưới áp lực và giải quyết các
-              thách thức bảo mật phức tạp.
+              tôi đã chứng minh khả năng làm việc dưới áp lực và giải quyết các thách thức bảo mật phức tạp.
             </p>
             <div class="about-highlights">
               <div class="highlight-item">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Sinh viên CNTT</span>
+                <i class="fas fa-graduation-cap"></i><span>Sinh viên CNTT</span>
               </div>
               <div class="highlight-item">
-                <i class="fas fa-shield-alt"></i>
-                <span>CTF Player</span>
+                <i class="fas fa-shield-alt"></i><span>CTF Player</span>
               </div>
               <div class="highlight-item">
-                <i class="fas fa-search"></i>
-                <span>OSINT Specialist</span>
+                <i class="fas fa-search"></i><span>OSINT Specialist</span>
               </div>
               <div class="highlight-item">
-                <i class="fas fa-users"></i>
-                <span>Team Captain</span>
+                <i class="fas fa-users"></i><span>Team Captain</span>
               </div>
             </div>
           </div>
@@ -147,117 +133,67 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section class="skills" id="skills">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title reveal">
           <span class="title-icon"><i class="fas fa-tools"></i></span>
           Kỹ năng
         </h2>
         <div class="skills-grid">
-          <div class="skill-category">
+          <div class="skill-category reveal">
             <h3><i class="fas fa-search"></i> OSINT</h3>
             <ul class="skill-list">
-              <li>
-                <span class="skill-name">Google Dorking</span
-                ><span class="skill-level advanced">Nâng cao</span>
-              </li>
-              <li>
-                <span class="skill-name">Social Media Investigation</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
-              <li>
-                <span class="skill-name">Image/Metadata Analysis</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
-              <li>
-                <span class="skill-name">Domain/IP Reconnaissance</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
+              <li><span class="skill-name">Google Dorking</span><span class="skill-level advanced">Nâng cao</span></li>
+              <li><span class="skill-name">Social Media Investigation</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Image / Metadata Analysis</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Domain / IP Reconnaissance</span><span class="skill-level intermediate">Trung bình</span></li>
             </ul>
           </div>
-          <div class="skill-category">
+          <div class="skill-category reveal">
             <h3><i class="fas fa-flag"></i> CTF Skills</h3>
             <ul class="skill-list">
-              <li>
-                <span class="skill-name">OSINT Challenges</span
-                ><span class="skill-level advanced">Nâng cao</span>
-              </li>
-              <li>
-                <span class="skill-name">Problem Solving</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
-              <li>
-                <span class="skill-name">Research & Analysis</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
-              <li>
-                <span class="skill-name">Team Collaboration</span
-                ><span class="skill-level advanced">Nâng cao</span>
-              </li>
+              <li><span class="skill-name">OSINT Challenges</span><span class="skill-level advanced">Nâng cao</span></li>
+              <li><span class="skill-name">Problem Solving</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Research &amp; Analysis</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Team Collaboration</span><span class="skill-level advanced">Nâng cao</span></li>
             </ul>
           </div>
-          <div class="skill-category">
+          <div class="skill-category reveal">
             <h3><i class="fas fa-code"></i> Lập trình</h3>
             <ul class="skill-list">
-              <li>
-                <span class="skill-name">Python</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
-              <li>
-                <span class="skill-name">Bash Scripting</span
-                ><span class="skill-level beginner">Cơ bản</span>
-              </li>
-              <li>
-                <span class="skill-name">SQL</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
-              <li>
-                <span class="skill-name">HTML/CSS/JS</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
+              <li><span class="skill-name">Python</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Bash Scripting</span><span class="skill-level beginner">Cơ bản</span></li>
+              <li><span class="skill-name">SQL</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">HTML / CSS / JS</span><span class="skill-level intermediate">Trung bình</span></li>
             </ul>
           </div>
-          <div class="skill-category">
-            <h3><i class="fas fa-laptop"></i> Công cụ</h3>
+          <div class="skill-category reveal">
+            <h3><i class="fas fa-laptop-code"></i> Công cụ</h3>
             <ul class="skill-list">
-              <li>
-                <span class="skill-name">Linux</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
-              <li>
-                <span class="skill-name">Wireshark</span
-                ><span class="skill-level beginner">Cơ bản</span>
-              </li>
-              <li>
-                <span class="skill-name">Burp Suite</span
-                ><span class="skill-level beginner">Cơ bản</span>
-              </li>
-              <li>
-                <span class="skill-name">Git</span
-                ><span class="skill-level intermediate">Trung bình</span>
-              </li>
+              <li><span class="skill-name">Linux</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Wireshark</span><span class="skill-level beginner">Cơ bản</span></li>
+              <li><span class="skill-name">Burp Suite</span><span class="skill-level beginner">Cơ bản</span></li>
+              <li><span class="skill-name">Metasploit</span><span class="skill-level beginner">Cơ bản</span></li>
+              <li><span class="skill-name">Nmap</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Git</span><span class="skill-level intermediate">Trung bình</span></li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTF Section -->
+    <!-- CTF -->
     <section class="ctf" id="ctf">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title reveal">
           <span class="title-icon"><i class="fas fa-flag-checkered"></i></span>
           CTF Profile
         </h2>
         <div class="ctf-content">
-          <div class="htb-profile">
+          <div class="htb-profile reveal">
             <div class="htb-header">
-              <img
-                src="images/hackthebox-logo.png"
-                alt="HackTheBox"
-                class="htb-logo"
-              />
+              <img src="images/hackthebox-logo.png" alt="HackTheBox" class="htb-logo" />
               <h3>HackTheBox</h3>
               <span class="htb-username">@Vui</span>
             </div>
@@ -298,19 +234,15 @@
                 <span class="team-icon">EX</span>
                 <div class="team-info">
                   <span class="team-name">Experience</span>
-                  <span class="team-role"
-                    ><i class="fas fa-crown"></i> Captain</span
-                  >
+                  <span class="team-role"><i class="fas fa-crown"></i> Captain</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="ctf-events">
+          <div class="ctf-events reveal">
             <h3>Sự kiện đã tham gia</h3>
             <div class="event-card">
-              <div class="event-icon">
-                <i class="fas fa-skull-crossbones"></i>
-              </div>
+              <div class="event-icon"><i class="fas fa-skull-crossbones"></i></div>
               <div class="event-info">
                 <h4>Cyber Apocalypse CTF 2025: Tales from Eldoria</h4>
                 <p class="event-organizer">Organized by HackTheBox</p>
@@ -326,348 +258,229 @@
       </div>
     </section>
 
-    <!-- HTB Academy Learning Section -->
+    <!-- HTB Academy Learning -->
     <section class="learning" id="learning">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title reveal">
           <span class="title-icon"><i class="fas fa-graduation-cap"></i></span>
           HackTheBox Academy
         </h2>
-        <div class="learning-intro">
+        <div class="learning-intro reveal">
           <div class="htb-academy-badge">
-            <img
-              src="https://academy.hackthebox.com/images/logo-htb-academy.svg"
-              alt="HTB Academy"
-              onerror="this.style.display = 'none'"
-            />
-            <div class="badge-info">
-              <h3>Completed Modules</h3>
-              <p>
-                Các khóa học bảo mật đã hoàn thành trên nền tảng HackTheBox
-                Academy
-              </p>
-              <span class="module-count"
-                ><i class="fas fa-check-circle"></i> 16 Modules</span
-              >
+            <img src="https://academy.hackthebox.com/images/logo-htb-academy.svg" alt="HTB Academy" onerror="this.style.display='none'" />
+            <div class="badge-info" style="flex:1;min-width:240px;">
+              <h3>Module Completion Badges</h3>
+              <p>Các module bảo mật đã hoàn thành trên nền tảng HackTheBox Academy</p>
+              <div class="module-progress">
+                <div class="progress-track"><div class="progress-fill"></div></div>
+                <span class="progress-text">19 / 158 modules</span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="modules-grid">
-          <!-- Security Fundamentals -->
-          <div class="module-category">
-            <h3><i class="fas fa-shield-alt"></i> Security Fundamentals</h3>
-            <div class="module-list">
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name"
-                    >Introduction to Information Security</span
-                  >
-                  <span class="module-desc"
-                    >Nền tảng về bảo mật thông tin, các khái niệm CIA triad,
-                    threat landscape</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name"
-                    >Introduction to Web Applications</span
-                  >
-                  <span class="module-desc"
-                    >Kiến trúc web, HTTP/HTTPS, front-end/back-end
-                    technologies</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Web Requests</span>
-                  <span class="module-desc"
-                    >HTTP methods, headers, cookies, cURL và browser
-                    DevTools</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">JavaScript Deobfuscation</span>
-                  <span class="module-desc"
-                    >Phân tích và deobfuscate mã JavaScript độc hại</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Operating Systems -->
-          <div class="module-category">
-            <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
-            <div class="module-list">
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Linux Fundamentals</span>
-                  <span class="module-desc"
-                    >Linux command line, file system, permissions,
-                    processes</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Windows Fundamentals</span>
-                  <span class="module-desc"
-                    >Windows architecture, registry, services, security
-                    features</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">MacOS Fundamentals</span>
-                  <span class="module-desc"
-                    >MacOS architecture, Terminal, security mechanisms</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name"
-                    >Introduction to Windows Command Line</span
-                  >
-                  <span class="module-desc"
-                    >CMD và PowerShell cho system administration và
-                    security</span
-                  >
-                </div>
-              </div>
-            </div>
+        <div class="badges-grid">
+          <div class="htb-badge v1 reveal">
+            <div class="badge-circle"><i class="fas fa-book-open"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Philomath</div>
+            <div class="badge-module">Learning Process</div>
           </div>
-
-          <!-- Networking & Enumeration -->
-          <div class="module-category">
-            <h3>
-              <i class="fas fa-network-wired"></i> Networking & Enumeration
-            </h3>
-            <div class="module-list">
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Introduction to Networking</span>
-                  <span class="module-desc"
-                    >TCP/IP, OSI model, protocols, network troubleshooting</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Network Enumeration with Nmap</span>
-                  <span class="module-desc"
-                    >Port scanning, service detection, NSE scripts, evasion
-                    techniques</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name"
-                    >Intro to Network Traffic Analysis</span
-                  >
-                  <span class="module-desc"
-                    >Wireshark, packet analysis, traffic monitoring, anomaly
-                    detection</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name"
-                    >Introduction to Active Directory</span
-                  >
-                  <span class="module-desc"
-                    >AD architecture, LDAP, Kerberos, common attack
-                    vectors</span
-                  >
-                </div>
-              </div>
-            </div>
+          <div class="htb-badge v2 reveal">
+            <div class="badge-circle"><i class="fas fa-user-graduate"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Academician</div>
+            <div class="badge-module">Introduction to Academy</div>
           </div>
-
-          <!-- Scripting & Getting Started -->
-          <div class="module-category">
-            <h3><i class="fas fa-code"></i> Scripting & Methodology</h3>
-            <div class="module-list">
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name"
-                    >Introduction to Bash Scripting</span
-                  >
-                  <span class="module-desc"
-                    >Bash scripting, automation, security tool development</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Learning Process</span>
-                  <span class="module-desc"
-                    >Methodology học tập hiệu quả trong cybersecurity</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Intro to Academy</span>
-                  <span class="module-desc"
-                    >Làm quen với nền tảng HTB Academy</span
-                  >
-                </div>
-              </div>
-              <div class="module-item completed">
-                <i class="fas fa-check-circle"></i>
-                <div class="module-info">
-                  <span class="module-name">Getting Started</span>
-                  <span class="module-desc"
-                    >Penetration testing methodology, VPN setup, reporting</span
-                  >
-                </div>
-              </div>
-            </div>
+          <div class="htb-badge v6 reveal">
+            <div class="badge-circle"><i class="fab fa-linux"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Our favorite seabird</div>
+            <div class="badge-module">Linux Fundamentals</div>
+          </div>
+          <div class="htb-badge v8 reveal">
+            <div class="badge-circle"><i class="fas fa-eye"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">The eye that sees all</div>
+            <div class="badge-module">Network Enumeration with Nmap</div>
+          </div>
+          <div class="htb-badge v3 reveal">
+            <div class="badge-circle"><i class="fas fa-terminal"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Do things the traditional way</div>
+            <div class="badge-module">Introduction to Bash Scripting</div>
+          </div>
+          <div class="htb-badge v4 reveal">
+            <div class="badge-circle"><i class="fas fa-network-wired"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Everything is connected</div>
+            <div class="badge-module">Introduction to Networking</div>
+          </div>
+          <div class="htb-badge v7 reveal">
+            <div class="badge-circle"><i class="fas fa-server"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Your request is my demand</div>
+            <div class="badge-module">Web Requests</div>
+          </div>
+          <div class="htb-badge v5 reveal">
+            <div class="badge-circle"><i class="fas fa-bug"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Combine the modules</div>
+            <div class="badge-module">Using the Metasploit Framework</div>
+          </div>
+          <div class="htb-badge v1 reveal">
+            <div class="badge-circle"><i class="fas fa-cat"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Playing with the mess</div>
+            <div class="badge-module">JavaScript Deobfuscation</div>
+          </div>
+          <div class="htb-badge v2 reveal">
+            <div class="badge-circle"><i class="fab fa-windows"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Crawl, walk, run</div>
+            <div class="badge-module">Windows Fundamentals</div>
+          </div>
+          <div class="htb-badge v6 reveal">
+            <div class="badge-circle"><i class="fas fa-user-shield"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Your white belt training begins</div>
+            <div class="badge-module">Introduction to Active Directory</div>
+          </div>
+          <div class="htb-badge v8 reveal">
+            <div class="badge-circle"><i class="fas fa-laptop-code"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Developer</div>
+            <div class="badge-module">Introduction to Web Applications</div>
+          </div>
+          <div class="htb-badge v3 reveal">
+            <div class="badge-circle"><i class="fas fa-rocket"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Your first battle</div>
+            <div class="badge-module">Getting Started</div>
+          </div>
+          <div class="htb-badge v4 reveal">
+            <div class="badge-circle"><i class="fas fa-wave-square"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Lurk in the packets</div>
+            <div class="badge-module">Intro to Network Traffic Analysis</div>
+          </div>
+          <div class="htb-badge v7 reveal">
+            <div class="badge-circle"><i class="fas fa-toolbox"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Start building your arsenal</div>
+            <div class="badge-module">Setting Up</div>
+          </div>
+          <div class="htb-badge v5 reveal">
+            <div class="badge-circle"><i class="fab fa-apple"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">An apple a day...</div>
+            <div class="badge-module">MacOS Fundamentals</div>
+          </div>
+          <div class="htb-badge v1 reveal">
+            <div class="badge-circle"><i class="fas fa-keyboard"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Look ma, no mouse!</div>
+            <div class="badge-module">Introduction to Windows Command Line</div>
+          </div>
+          <div class="htb-badge v2 reveal">
+            <div class="badge-circle"><i class="fas fa-radiation"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Panoptic</div>
+            <div class="badge-module">Incident Handling Process</div>
+          </div>
+          <div class="htb-badge v6 reveal">
+            <div class="badge-circle"><i class="fas fa-shield-virus"></i><span class="badge-check"><i class="fas fa-check"></i></span></div>
+            <div class="badge-title">Cyber starter</div>
+            <div class="badge-module">Introduction to Information Security</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- Certifications -->
     <section class="certifications" id="certifications">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title reveal">
           <span class="title-icon"><i class="fas fa-certificate"></i></span>
           Chứng Chỉ Chuyên Môn
         </h2>
         <div class="certifications-grid">
-          <!-- CCEP Certificate -->
-          <div class="cert-card obtained">
+          <!-- CCEP -->
+          <div class="cert-card reveal">
             <div class="cert-image">
               <img src="images/ccep-certificate.png" alt="CCEP Certificate" />
-              <div class="cert-overlay">
-                <i class="fas fa-search-plus"></i>
-              </div>
+              <div class="cert-overlay"><i class="fas fa-search-plus"></i></div>
             </div>
             <div class="cert-info">
-              <h3>CCEP - Certified Cybersecurity Educator Professional</h3>
-              <p class="cert-issuer">
-                <i class="fas fa-building"></i> Red Team Leaders
-              </p>
-              <p class="cert-date">
-                <i class="fas fa-calendar-check"></i> Tháng 1/2026
-              </p>
-              <span class="cert-status obtained"
-                ><i class="fas fa-check-circle"></i> Đã đạt</span
-              >
+              <h3>CCEP — Certified Cybersecurity Educator Professional</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> Red Team Leaders</p>
+              <p class="cert-date"><i class="fas fa-calendar-check"></i> Tháng 1/2026</p>
+              <span class="cert-status obtained"><i class="fas fa-check-circle"></i> Đã đạt</span>
             </div>
           </div>
-          <!-- Security+ In Progress -->
-          <div class="cert-card in-progress">
-            <div class="cert-badge">
-              <i class="fas fa-user-shield"></i>
+
+          <!-- HTB CTF Certificate (Vui) -->
+          <div class="cert-card reveal">
+            <div class="cert-image">
+              <img src="images/ctf-certificate-vui.png" alt="HackTheBox CTF Certificate - Vui" />
+              <div class="cert-overlay"><i class="fas fa-search-plus"></i></div>
             </div>
+            <div class="cert-info">
+              <h3>HTB Cyber Apocalypse CTF 2025 — Certificate of Participation</h3>
+              <p class="cert-issuer"><i class="fas fa-building"></i> HackTheBox</p>
+              <p class="cert-date"><i class="fas fa-calendar-check"></i> 2025</p>
+              <span class="cert-status obtained"><i class="fas fa-check-circle"></i> Đã đạt</span>
+              <div class="cert-actions">
+                <a href="images/ctf-certificate-vui.pdf" target="_blank" class="cert-action">
+                  <i class="fas fa-file-pdf"></i> Xem PDF
+                </a>
+                <a href="images/ctf-certificate-vui.pdf" download class="cert-action">
+                  <i class="fas fa-download"></i> Tải về
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security+ in progress -->
+          <div class="cert-card reveal">
+            <div class="cert-badge"><i class="fas fa-user-shield"></i></div>
             <div class="cert-info">
               <h3>CompTIA Security+ (SY0-701)</h3>
-              <p class="cert-issuer">
-                <i class="fas fa-graduation-cap"></i> Đang học trên Udemy
-              </p>
-              <p class="cert-date">
-                <i class="fas fa-clock"></i> Dự kiến hoàn thành: 2026
-              </p>
-              <span class="cert-status in-progress"
-                ><i class="fas fa-spinner"></i> Đang học</span
-              >
+              <p class="cert-issuer"><i class="fas fa-graduation-cap"></i> Đang học trên Udemy</p>
+              <p class="cert-date"><i class="fas fa-clock"></i> Dự kiến hoàn thành: 2026</p>
+              <span class="cert-status in-progress"><i class="fas fa-spinner"></i> Đang học</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Achievements Section -->
+    <!-- Achievements -->
     <section class="achievements" id="achievements">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title reveal">
           <span class="title-icon"><i class="fas fa-award"></i></span>
-          Giấy Khen & Thành Tựu
+          Giấy Khen &amp; Thành Tựu
         </h2>
         <div class="achievements-grid">
-          <div class="achievement-card">
+          <div class="achievement-card reveal">
             <div class="achievement-image">
-              <img
-                src="images/Bảng giải nhất nghiên cứu khoa học.jpg"
-                alt="Giải Nhất Nghiên Cứu Khoa Học"
-              />
-              <div class="achievement-overlay">
-                <i class="fas fa-search-plus"></i>
-              </div>
+              <img src="images/Bảng giải nhất nghiên cứu khoa học.jpg" alt="Giải Nhất Nghiên Cứu Khoa Học" />
+              <div class="achievement-overlay"><i class="fas fa-search-plus"></i></div>
             </div>
             <div class="achievement-info">
-              <h3>
-                <i class="fas fa-trophy gold"></i> Giải Nhất Nghiên Cứu Khoa Học
-              </h3>
+              <h3><i class="fas fa-trophy gold"></i> Giải Nhất Nghiên Cứu Khoa Học</h3>
               <p>
-                Đạt giải Nhất cuộc thi Sinh viên Nghiên cứu Khoa học Trường Đại
-                học Công nghệ Sài Gòn năm học 2024-2025 với giải thưởng
-                3.000.000 VNĐ.
+                Đạt giải Nhất cuộc thi Sinh viên Nghiên cứu Khoa học Trường Đại học Công nghệ Sài Gòn
+                năm học 2024-2025 với giải thưởng 3.000.000 VNĐ.
               </p>
             </div>
           </div>
-          <div class="achievement-card">
+          <div class="achievement-card reveal">
             <div class="achievement-image">
-              <img
-                src="images/Bằng nghiên cứu khoa học.jpg"
-                alt="Giấy Khen Giải Nhất NCKH"
-              />
-              <div class="achievement-overlay">
-                <i class="fas fa-search-plus"></i>
-              </div>
+              <img src="images/Bằng nghiên cứu khoa học.jpg" alt="Giấy Khen Giải Nhất NCKH" />
+              <div class="achievement-overlay"><i class="fas fa-search-plus"></i></div>
             </div>
             <div class="achievement-info">
-              <h3>
-                <i class="fas fa-award gold"></i> Giấy Khen Giải Nhất NCKH
-              </h3>
+              <h3><i class="fas fa-award gold"></i> Giấy Khen Giải Nhất NCKH</h3>
               <p>
-                Được Hiệu trưởng Trường Đại học Công nghệ Sài Gòn trao tặng giấy
-                khen vì đạt giải Nhất cuộc thi Nghiên cứu Khoa học.
+                Được Hiệu trưởng Trường Đại học Công nghệ Sài Gòn trao tặng giấy khen
+                vì đạt giải Nhất cuộc thi Nghiên cứu Khoa học.
               </p>
             </div>
           </div>
-          <div class="achievement-card">
+          <div class="achievement-card reveal">
             <div class="achievement-image">
-              <img
-                src="images/Bằng Tiếng Anh.jpg"
-                alt="Giấy Khen Giải Nhì CLB Tiếng Anh"
-              />
-              <div class="achievement-overlay">
-                <i class="fas fa-search-plus"></i>
-              </div>
+              <img src="images/Bằng Tiếng Anh.jpg" alt="Giấy Khen Giải Nhì CLB Tiếng Anh" />
+              <div class="achievement-overlay"><i class="fas fa-search-plus"></i></div>
             </div>
             <div class="achievement-info">
-              <h3>
-                <i class="fas fa-award silver"></i> Giải Nhì CLB Tiếng Anh
-              </h3>
+              <h3><i class="fas fa-award silver"></i> Giải Nhì CLB Tiếng Anh</h3>
               <p>
-                Được Hiệu trưởng Trường Đại học Công nghệ Sài Gòn trao tặng giấy
-                khen vì đạt giải Nhì Câu lạc bộ Tiếng Anh cấp trường.
+                Được Hiệu trưởng Trường Đại học Công nghệ Sài Gòn trao tặng giấy khen
+                vì đạt giải Nhì Câu lạc bộ Tiếng Anh cấp trường.
               </p>
             </div>
           </div>
@@ -675,105 +488,54 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section class="contact" id="contact">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title reveal">
           <span class="title-icon"><i class="fas fa-paper-plane"></i></span>
           Liên hệ
         </h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <p class="contact-intro">
-              Tôi luôn sẵn sàng kết nối và trao đổi về cơ hội thực tập trong
-              lĩnh vực Cybersecurity. Hãy liên hệ với tôi qua các kênh dưới đây!
-            </p>
-            <div class="contact-links">
-              <a
-                href="https://ctf.hackthebox.com/user/profile/388852"
-                target="_blank"
-                class="contact-link htb"
-              >
-                <i class="fas fa-cube"></i>
-                <span>HackTheBox CTF Profile</span>
-              </a>
-              <a
-                href="mailto:trantuananh.businessman@gmail.com"
-                class="contact-link email"
-              >
-                <i class="fas fa-envelope"></i>
-                <span>trantuananh.businessman@gmail.com</span>
-              </a>
-              <a href="tel:+84909874538" class="contact-link phone">
-                <i class="fas fa-phone"></i>
-                <span>+84 909 874 538</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/tuan-anh-tran-930008309"
-                target="_blank"
-                class="contact-link linkedin"
-              >
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://github.com/plastma65"
-                target="_blank"
-                class="contact-link github"
-              >
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-              </a>
-            </div>
-          </div>
-          <div class="contact-form-container">
-            <form class="contact-form">
-              <div class="form-group">
-                <label for="name"><i class="fas fa-user"></i> Họ tên</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Nhập họ tên của bạn"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Nhập email của bạn"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="subject"><i class="fas fa-tag"></i> Chủ đề</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Chủ đề tin nhắn"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <label for="message"
-                  ><i class="fas fa-comment"></i> Tin nhắn</label
-                >
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Nội dung tin nhắn..."
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-submit">
-                <i class="fas fa-paper-plane"></i> Gửi tin nhắn
-              </button>
-            </form>
+        <div class="contact-content reveal">
+          <p class="contact-intro">
+            Tôi luôn sẵn sàng kết nối và trao đổi về cơ hội thực tập trong lĩnh vực Cybersecurity.
+            Hãy chọn kênh liên hệ phù hợp dưới đây!
+          </p>
+          <div class="contact-grid">
+            <a href="mailto:trantuananh.businessman@gmail.com" class="contact-link email">
+              <i class="fas fa-envelope"></i>
+              <span class="contact-link-label">
+                <span class="ctype">Email</span>
+                <span class="cval">trantuananh.businessman@gmail.com</span>
+              </span>
+            </a>
+            <a href="tel:+84909874538" class="contact-link phone">
+              <i class="fas fa-phone"></i>
+              <span class="contact-link-label">
+                <span class="ctype">Phone</span>
+                <span class="cval">+84 909 874 538</span>
+              </span>
+            </a>
+            <a href="https://linkedin.com/in/tuan-anh-tran-930008309" target="_blank" rel="noopener" class="contact-link linkedin">
+              <i class="fab fa-linkedin"></i>
+              <span class="contact-link-label">
+                <span class="ctype">LinkedIn</span>
+                <span class="cval">tuan-anh-tran-930008309</span>
+              </span>
+            </a>
+            <a href="https://github.com/plastma65" target="_blank" rel="noopener" class="contact-link github">
+              <i class="fab fa-github"></i>
+              <span class="contact-link-label">
+                <span class="ctype">GitHub</span>
+                <span class="cval">@plastma65</span>
+              </span>
+            </a>
+            <a href="https://ctf.hackthebox.com/user/profile/388852" target="_blank" rel="noopener" class="contact-link">
+              <i class="fas fa-cube"></i>
+              <span class="contact-link-label">
+                <span class="ctype">HackTheBox CTF</span>
+                <span class="cval">@Vui</span>
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -784,32 +546,16 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <span class="logo-bracket">&lt;</span>Tuấn Anh<span
-              class="logo-bracket"
-              >/&gt;</span
-            >
+            <span class="logo-bracket">&lt;</span>Tuấn Anh<span class="logo-bracket">/&gt;</span>
           </div>
-          <p class="footer-text">
-            Cyber Security Intern | CTF Player | OSINT Enthusiast
-          </p>
+          <p class="footer-text">Cyber Security Intern | CTF Player | OSINT Enthusiast</p>
           <div class="footer-social">
-            <a
-              href="https://ctf.hackthebox.com/user/profile/388852"
-              target="_blank"
-              ><i class="fas fa-cube"></i
-            ></a>
-            <a href="https://github.com/plastma65" target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://linkedin.com/in/tuan-anh-tran-930008309"
-              target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
+            <a href="https://ctf.hackthebox.com/user/profile/388852" target="_blank" rel="noopener" aria-label="HackTheBox"><i class="fas fa-cube"></i></a>
+            <a href="https://github.com/plastma65" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/tuan-anh-tran-930008309" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:trantuananh.businessman@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
-          <p class="footer-copyright">
-            © 2026 Trần Tuấn Anh. All rights reserved.
-          </p>
+          <p class="footer-copyright">© 2026 Trần Tuấn Anh. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -817,7 +563,7 @@
     <!-- Image Modal -->
     <div class="modal" id="imageModal">
       <span class="modal-close">&times;</span>
-      <img class="modal-content" id="modalImage" />
+      <img class="modal-content" id="modalImage" alt="" />
       <div class="modal-caption" id="modalCaption"></div>
     </div>
 
