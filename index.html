@@ -29,6 +29,7 @@
         <ul class="nav-menu">
           <li><a href="#about" class="nav-link">Về tôi</a></li>
           <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+          <li><a href="#projects" class="nav-link">Dự án</a></li>
           <li><a href="#ctf" class="nav-link">CTF</a></li>
           <li><a href="#learning" class="nav-link">HTB Academy</a></li>
           <li><a href="#certifications" class="nav-link">Chứng chỉ</a></li>
@@ -179,6 +180,140 @@
               <li><span class="skill-name">Git</span><span class="skill-level intermediate">Trung bình</span></li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal">
+          <span class="title-icon"><i class="fas fa-code-branch"></i></span>
+          Dự án nổi bật
+        </h2>
+        <div class="projects-grid">
+          <!-- Project 1: ML Phishing Detection -->
+          <article class="project-card reveal">
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-shield-virus"></i></div>
+              <div class="project-meta">
+                <span class="project-tag security">Security ML</span>
+                <span class="project-year">2025</span>
+              </div>
+            </div>
+            <h3 class="project-title">
+              Anomalous Email (Phishing) Detection using Machine Learning
+            </h3>
+            <div class="project-stack">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Scikit-learn</span>
+              <span class="tech-chip">Random Forest</span>
+              <span class="tech-chip">NLP</span>
+              <span class="tech-chip">RFECV</span>
+            </div>
+            <ul class="project-points">
+              <li>
+                Xây dựng pipeline ML để phát hiện email bất thường, trực tiếp đối phó với
+                <strong>Social Engineering &amp; Phishing</strong> attack vectors.
+              </li>
+              <li>
+                Trích xuất feature từ <strong>headers/bodies</strong> của email, áp dụng tiền xử lý nâng cao chống
+                <strong>Unicode homograph attacks</strong> và HTML ẩn của attacker.
+              </li>
+              <li>
+                Tối ưu feature space từ <strong>20,000 xuống còn 5,000</strong> features quan trọng dùng
+                Recursive Feature Elimination (RFECV).
+              </li>
+              <li>
+                Train &amp; đánh giá Random Forest classifier — đạt <strong>99.96% accuracy</strong> và
+                <strong>100% precision</strong> (zero false positives).
+              </li>
+            </ul>
+            <div class="project-stats">
+              <div class="pstat">
+                <span class="pstat-value">99.96%</span>
+                <span class="pstat-label">Accuracy</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-value">100%</span>
+                <span class="pstat-label">Precision</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-value">75%</span>
+                <span class="pstat-label">Feature Reduction</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/plastma65/Ph-n-lo-i-email-v-s-i-n-tho-i-b-ng-m-h-nh-h-c-m-y"
+                 target="_blank" rel="noopener" class="project-action">
+                <i class="fab fa-github"></i> Source code
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: Recommender System -->
+          <article class="project-card reveal">
+            <div class="project-header">
+              <div class="project-icon alt"><i class="fas fa-graduation-cap"></i></div>
+              <div class="project-meta">
+                <span class="project-tag award">First Prize NCKH</span>
+                <span class="project-year">2024-2025</span>
+              </div>
+            </div>
+            <h3 class="project-title">
+              Personalized Learning Recommender System
+            </h3>
+            <div class="project-stack">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Flask API</span>
+              <span class="tech-chip">React</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">Sentence-Transformers</span>
+              <span class="tech-chip">Moodle Plugin</span>
+            </div>
+            <p class="project-role">
+              <i class="fas fa-crown"></i> <strong>Role:</strong> Project Leader — dẫn dắt nhóm 5 thành viên
+            </p>
+            <ul class="project-points">
+              <li>
+                Thiết kế <strong>3-tier architecture</strong>: React frontend (Moodle plugin) +
+                Flask RESTful API + MySQL database để gợi ý khoá học cá nhân hoá.
+              </li>
+              <li>
+                Triển khai <strong>Content-Based Filtering engine</strong> dùng thư viện
+                <code>sentence-transformers</code> chuyển user profile và mô tả khoá học thành
+                vector embeddings, dùng <strong>cosine similarity</strong> để matching.
+              </li>
+              <li>
+                Quản lý nhóm 5 thành viên xuyên suốt vòng đời dự án: thu thập dữ liệu →
+                triển khai → testing.
+              </li>
+              <li>
+                <strong>Đạt giải Nhất</strong> cuộc thi Sinh viên Nghiên cứu Khoa học STU 2024-2025
+                (giải thưởng 3.000.000 VNĐ).
+              </li>
+            </ul>
+            <div class="project-stats">
+              <div class="pstat">
+                <span class="pstat-value">3-Tier</span>
+                <span class="pstat-label">Architecture</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-value">5</span>
+                <span class="pstat-label">Team Members</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-value">🥇 #1</span>
+                <span class="pstat-label">NCKH Award</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/plastma65/Flask-Recommender-System"
+                 target="_blank" rel="noopener" class="project-action">
+                <i class="fab fa-github"></i> Source code
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
