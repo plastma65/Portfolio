@@ -314,6 +314,76 @@
               </a>
             </div>
           </article>
+          <!-- Project 3: University Threat Detection (NCKH, in progress) -->
+          <article class="project-card reveal">
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-radiation"></i></div>
+              <div class="project-meta">
+                <span class="project-tag in-progress">In Progress</span>
+                <span class="project-year">2026 · NCKH</span>
+              </div>
+            </div>
+            <h3 class="project-title">
+              AI-assisted Threat Detection using Multi-Source Log Analytics for University Systems
+            </h3>
+            <div class="project-stack">
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Scikit-learn</span>
+              <span class="tech-chip">Fluentbit</span>
+              <span class="tech-chip">Loki</span>
+              <span class="tech-chip">PostgreSQL</span>
+              <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">Grafana</span>
+              <span class="tech-chip">Docker</span>
+            </div>
+            <p class="project-role">
+              <i class="fas fa-user-tie"></i> <strong>Role:</strong> Project Lead &amp; Lead Author —
+              feature engineering, ML engine, risk scoring, paper writing · Target: <strong>Q3 publication</strong>
+            </p>
+            <ul class="project-points">
+              <li>
+                Xây dựng <strong>framework phân tích log đa nguồn</strong> tích hợp AI để phát hiện
+                threats trong môi trường đại học (target: small/medium universities thiếu SOC).
+              </li>
+              <li>
+                Pipeline 6-layer: Log Sources (pfSense, Linux auth, Nginx, FastAPI, PostgreSQL) →
+                <strong>Fluentbit</strong> → <strong>Loki</strong> → Feature Extraction → ML Engine →
+                Risk Scoring → <strong>Grafana SOC-lite Dashboard</strong>.
+              </li>
+              <li>
+                Áp dụng <strong>ensemble anomaly detection</strong>: Isolation Forest, LOF, One-class SVM —
+                kết hợp voting cho final anomaly score.
+              </li>
+              <li>
+                Feature engineering nâng cao: sliding windows, IP entropy, request rate, login fail count;
+                synthetic attack generation (SSH brute-force, endpoint scanning, credential stuffing).
+              </li>
+              <li>
+                Đánh giá benchmark trên CICIDS / UNSW-NB15 datasets; metrics:
+                <strong>Precision · Recall · F1 · ROC-AUC</strong>.
+              </li>
+            </ul>
+            <div class="project-stats">
+              <div class="pstat">
+                <span class="pstat-value">6-Layer</span>
+                <span class="pstat-label">Architecture</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-value">5+</span>
+                <span class="pstat-label">Log Sources</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-value">3</span>
+                <span class="pstat-label">ML Models</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <span class="project-action disabled">
+                <i class="fas fa-lock"></i> Source coming soon
+              </span>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>

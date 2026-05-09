@@ -1,0 +1,20 @@
+# Local helper scripts (do not push)
+*.bat
+*.cmd
+*.ps1
+*.sh
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs / temp
+*.log
+*.tmp
+node_modules/
