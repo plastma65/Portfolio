@@ -233,7 +233,7 @@
               <li><span class="skill-name">OSINT Challenges</span><span class="skill-level advanced">Nâng cao</span></li>
               <li><span class="skill-name">Team Leadership (5 thành viên)</span><span class="skill-level advanced">Nâng cao</span></li>
               <li><span class="skill-name">Research &amp; Technical Writing</span><span class="skill-level intermediate">Trung bình</span></li>
-              <li><span class="skill-name">Tiếng Anh (đọc tài liệu kỹ thuật tốt, giao tiếp cơ bản)</span><span class="skill-level intermediate">Trung bình</span></li>
+              <li><span class="skill-name">Tiếng Anh (professional working)</span><span class="skill-level intermediate">Trung bình</span></li>
             </ul>
           </div>
         </div>
@@ -346,22 +346,22 @@
                 Recursive Feature Elimination (RFECV).
               </li>
               <li>
-                Train &amp; đánh giá <strong>Random Forest classifier</strong>, so sánh với baseline;
-                đánh giá bằng precision / recall / F1 trên tập held-out.
+                Train &amp; đánh giá Random Forest classifier — đạt <strong>99.96% accuracy</strong> và
+                <strong>100% precision</strong> (zero false positives).
               </li>
             </ul>
             <div class="project-stats">
               <div class="pstat">
-                <span class="pstat-value">20k→5k</span>
-                <span class="pstat-label">Features (RFECV)</span>
+                <span class="pstat-value">99.96%</span>
+                <span class="pstat-label">Accuracy</span>
               </div>
               <div class="pstat">
-                <span class="pstat-value pstat-text">Random Forest</span>
-                <span class="pstat-label">Model</span>
+                <span class="pstat-value">100%</span>
+                <span class="pstat-label">Precision</span>
               </div>
               <div class="pstat">
-                <span class="pstat-value pstat-text">Header + Body</span>
-                <span class="pstat-label">Feature Sources</span>
+                <span class="pstat-value">75%</span>
+                <span class="pstat-label">Feature Reduction</span>
               </div>
             </div>
             <div class="project-actions">
@@ -525,33 +525,33 @@
             </div>
             <div class="htb-stats">
               <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="stat-icon"><i class="fas fa-flag"></i></div>
                 <div class="stat-info">
-                  <span class="stat-value">Skilled</span>
-                  <span class="stat-label">Academy Rank</span>
+                  <span class="stat-value">2</span>
+                  <span class="stat-label">Total Pwns</span>
                 </div>
               </div>
               <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-cubes"></i></div>
+                <div class="stat-icon"><i class="fas fa-star"></i></div>
                 <div class="stat-info">
-                  <span class="stat-value">19</span>
-                  <span class="stat-label">Modules hoàn thành</span>
+                  <span class="stat-value">1525</span>
+                  <span class="stat-label">Total Points</span>
                 </div>
               </div>
               <div class="stat-card">
-                <div class="stat-icon"><i class="fas fa-route"></i></div>
+                <div class="stat-icon"><i class="fas fa-trophy"></i></div>
                 <div class="stat-info">
-                  <span class="stat-value">3</span>
-                  <span class="stat-label">Paths hoàn thành</span>
+                  <span class="stat-value">1</span>
+                  <span class="stat-label">CTF Events</span>
                 </div>
               </div>
             </div>
             <div class="htb-category">
-              <h4>Hướng tập trung</h4>
+              <h4>Most Solved Category</h4>
               <div class="category-badge">
                 <i class="fas fa-search"></i>
                 <span>OSINT</span>
-                <span class="category-stats">Google dorking • metadata • domain/IP recon</span>
+                <span class="category-stats">2 flags • 1525 points</span>
               </div>
             </div>
             <div class="htb-team">
@@ -573,9 +573,9 @@
                 <h4>Cyber Apocalypse CTF 2025: Tales from Eldoria</h4>
                 <p class="event-organizer">Organized by HackTheBox</p>
                 <div class="event-stats">
-                  <span><i class="fas fa-calendar"></i> 2025</span>
-                  <span><i class="fas fa-search"></i> Chuyên mục OSINT</span>
-                  <span><i class="fas fa-users"></i> Đội sinh viên</span>
+                  <span><i class="fas fa-ranking-star"></i> Rank: #3518</span>
+                  <span><i class="fas fa-flag"></i> 2 Flags</span>
+                  <span><i class="fas fa-star"></i> 1525 Points</span>
                 </div>
               </div>
             </div>
