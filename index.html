@@ -453,56 +453,61 @@
             <div class="project-stack">
               <span class="tech-chip">Python</span>
               <span class="tech-chip">Scikit-learn</span>
-              <span class="tech-chip">Fluentbit</span>
-              <span class="tech-chip">Loki</span>
-              <span class="tech-chip">PostgreSQL</span>
               <span class="tech-chip">FastAPI</span>
+              <span class="tech-chip">PostgreSQL</span>
+              <span class="tech-chip">Loki</span>
               <span class="tech-chip">Grafana</span>
-              <span class="tech-chip">Docker</span>
+              <span class="tech-chip">Docker Compose</span>
+              <span class="tech-chip">JWT / RBAC</span>
+              <span class="tech-chip">pytest</span>
             </div>
             <p class="project-role">
               <i class="fas fa-user-tie"></i> <strong>Role:</strong> Project Lead &amp; Lead Author —
-              feature engineering, ML engine, risk scoring, paper writing · Bài báo <strong>Q3</strong> đang chuẩn bị
+              ML/AI engine, feature engineering, risk scoring, đánh giá &amp; viết bài ·
+              Team 2 người · Bài báo <strong>Q3</strong> đang chuẩn bị
             </p>
             <ul class="project-points">
               <li>
                 <strong>Đã bảo vệ thành công luận văn tốt nghiệp</strong> (Đại học Công nghệ Sài Gòn, 2026)
-                với điểm tổng kết <strong>7.9/10</strong>.
+                với điểm tổng kết <strong>7.9/10</strong>. Sản phẩm <strong>SOC-lite RC1</strong> hoàn chỉnh,
+                chạy end-to-end.
               </li>
               <li>
-                Xây dựng <strong>framework phân tích log đa nguồn</strong> tích hợp AI để phát hiện
-                threats trong môi trường đại học (target: small/medium universities thiếu SOC).
+                Pipeline end-to-end: Log Sources → <strong>Unified Log Model</strong> (chuẩn hoá đa nguồn:
+                Nginx, Linux auth, firewall) → PostgreSQL → <strong>feature window 15 phút</strong> →
+                Scaler + <strong>Isolation Forest</strong> → phân loại anomaly → <strong>risk scoring</strong>
+                &amp; severity → alert persistence.
               </li>
               <li>
-                Pipeline 6-layer: Log Sources (pfSense, Linux auth, Nginx, FastAPI, PostgreSQL) →
-                <strong>Fluentbit</strong> → <strong>Loki</strong> → Feature Extraction → ML Engine →
-                Risk Scoring → <strong>Grafana SOC-lite Dashboard</strong>.
+                Nhận diện hành vi tấn công như <strong>brute-force</strong> và <strong>reconnaissance</strong>;
+                inference job chạy định kỳ trên log mới, lưu alert cho analyst triage.
               </li>
               <li>
-                Áp dụng <strong>ensemble anomaly detection</strong>: Isolation Forest, LOF, One-class SVM —
-                kết hợp voting cho final anomaly score.
+                Xây <strong>SOC analyst dashboard</strong> + REST API (FastAPI/Swagger) với
+                <strong>JWT auth, bcrypt, rate limiting, RBAC</strong> (admin / analyst / viewer),
+                assign alert, audit logging; tích hợp <strong>Grafana + Loki</strong> qua Docker Compose.
               </li>
               <li>
-                Feature engineering nâng cao: sliding windows, IP entropy, request rate, login fail count;
-                synthetic attack generation (SSH brute-force, endpoint scanning, credential stuffing).
+                Feature engineering: sliding windows, request rate, login fail count, IP entropy;
+                bộ test <strong>unit · API · security · integration</strong> bằng pytest.
               </li>
               <li>
-                Đánh giá benchmark trên CICIDS / UNSW-NB15 datasets; metrics:
+                Đánh giá benchmark trên <strong>CICIDS / UNSW-NB15</strong>; metrics:
                 <strong>Precision · Recall · F1 · ROC-AUC</strong>.
               </li>
             </ul>
             <div class="project-stats">
               <div class="pstat">
-                <span class="pstat-value">6-Layer</span>
-                <span class="pstat-label">Architecture</span>
-              </div>
-              <div class="pstat">
-                <span class="pstat-value">5+</span>
-                <span class="pstat-label">Log Sources</span>
+                <span class="pstat-value">RC1</span>
+                <span class="pstat-label">End-to-end</span>
               </div>
               <div class="pstat">
                 <span class="pstat-value">3</span>
-                <span class="pstat-label">ML Models</span>
+                <span class="pstat-label">Log Sources</span>
+              </div>
+              <div class="pstat">
+                <span class="pstat-value">15p</span>
+                <span class="pstat-label">Feature Window</span>
               </div>
               <div class="pstat">
                 <span class="pstat-value">7.9</span>
@@ -510,9 +515,10 @@
               </div>
             </div>
             <div class="project-actions">
-              <span class="project-action disabled">
-                <i class="fas fa-lock"></i> Source coming soon
-              </span>
+              <a href="https://github.com/plastma65/University_Threat_Detection-"
+                 target="_blank" rel="noopener" class="project-action">
+                <i class="fab fa-github"></i> Source code
+              </a>
             </div>
           </article>
 
