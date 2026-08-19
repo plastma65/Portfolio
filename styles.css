@@ -1305,3 +1305,18 @@ section.hero { padding-top: 110px; }
 @media (max-width: 640px) {
   .pstat-value.pstat-text { font-size: 0.82rem; }
 }
+
+/* THESIS TAG + 4-stat project grid */
+.project-tag.thesis {
+  background: rgba(159, 239, 0, 0.12);
+  color: var(--neon);
+  border: 1px solid rgba(159, 239, 0, 0.45);
+}
+.project-stats:has(> .pstat:nth-child(4)) {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 900px) {
+  .project-stats:has(> .pstat:nth-child(4)) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
