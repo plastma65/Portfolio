@@ -353,12 +353,34 @@
       if (sourceLink) sourceLink.href = "https://github.com/plastma65/luna-vi-companion";
     }
 
+    const googleCertCard = Array.from(document.querySelectorAll(".cert-card")).find(function (card) {
+      const title = card.querySelector("h3");
+      return title && title.textContent.includes("Google Cybersecurity Professional Certificate");
+    });
+    if (googleCertCard) {
+      const status = googleCertCard.querySelector(".cert-status");
+      if (status) status.innerHTML = '<i class="fas fa-spinner"></i> 6 / 9 khoá';
+      if (!googleCertCard.querySelector(".course-6-certificate")) {
+        const link = document.createElement("a");
+        link.className = "course-6-certificate";
+        link.href = "https://coursera.org/share/42ee829052ffb110e8b21ecc0e398abf";
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "Course 6: Sound the Alarm — certificate";
+        link.style.display = "inline-block";
+        link.style.marginTop = "8px";
+        link.style.color = "var(--neon)";
+        link.style.fontSize = "0.9rem";
+        googleCertCard.appendChild(link);
+      }
+    }
+
     const learningIntro = document.querySelector("#learning .learning-intro");
     if (learningIntro && !document.getElementById("security-learning-path")) {
       const path = document.createElement("p");
       path.id = "security-learning-path";
       path.innerHTML =
-        "<strong>Lộ trình hiện tại:</strong> Google Cybersecurity Professional Certificate (5/9), " +
+        "<strong>Lộ trình hiện tại:</strong> Google Cybersecurity Professional Certificate (6/9; vừa hoàn thành Course 6: Sound the Alarm — Detection and Response), " +
         "HTB Academy Junior Cybersecurity Analyst (đang học). Tiếp theo dự kiến: " +
         "Penetration Tester, Web Penetration Tester và AI Red Teaming.";
       learningIntro.appendChild(path);
