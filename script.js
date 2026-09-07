@@ -223,6 +223,7 @@
   /* ---------- Portfolio content refresh ---------- */
   function initPortfolioContent() {
     document.title = "Trần Tuấn Anh — Cyber Security & AI/ML Portfolio";
+
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute(
@@ -298,44 +299,19 @@
             <i class="fas fa-user-astronaut"></i> <strong>Role:</strong> Cá nhân — thiết kế, train, eval và release end-to-end
           </p>
           <ul class="project-points">
-            <li>
-              Thiết kế và train <strong>decoder-only Transformer ~110M tham số hoàn toàn từ số 0</strong>
-              trên khoảng <strong>2,2 tỷ token tiếng Việt</strong>; không nạp pretrained weights từ model khác.
-            </li>
-            <li>
-              Xây toàn bộ pipeline gồm <strong>Byte-level BPE 32K</strong>, xử lý/dedup dữ liệu,
-              checkpoint/resume, autoregressive sampling và CPU/GPU inference.
-            </li>
-            <li>
-              Final held-out trên dữ liệu human-authored đã khóa trước khi đo: <strong>NLL 3.2195,
-              PPL 25.016</strong> trên 17.580 token; exact-document overlap bằng 0 với 2,4M raw documents.
-            </li>
-            <li>
-              Public source theo <strong>Apache-2.0</strong> và inference-only Safetensors weights;
-              đã kiểm vòng export → Hugging Face → clean download → CPU forward.
-            </li>
+            <li>Thiết kế và train <strong>decoder-only Transformer ~110M tham số hoàn toàn từ số 0</strong> trên khoảng <strong>2,2 tỷ token tiếng Việt</strong>; không nạp pretrained weights từ model khác.</li>
+            <li>Xây toàn bộ pipeline gồm <strong>Byte-level BPE 32K</strong>, xử lý/dedup dữ liệu, checkpoint/resume, autoregressive sampling và CPU/GPU inference.</li>
+            <li>Final held-out trên dữ liệu human-authored đã khóa trước khi đo: <strong>NLL 3.2195, PPL 25.016</strong> trên 17.580 token; exact-document overlap bằng 0 với 2,4M raw documents.</li>
+            <li>Public source theo <strong>Apache-2.0</strong> và inference-only Safetensors weights; đã kiểm vòng export → Hugging Face → clean download → CPU forward.</li>
           </ul>
           <div class="project-stats">
-            <div class="pstat">
-              <span class="pstat-value">~110M</span>
-              <span class="pstat-label">Parameters</span>
-            </div>
-            <div class="pstat">
-              <span class="pstat-value">2.2B</span>
-              <span class="pstat-label">Train Tokens</span>
-            </div>
-            <div class="pstat">
-              <span class="pstat-value">25.016</span>
-              <span class="pstat-label">Final PPL</span>
-            </div>
+            <div class="pstat"><span class="pstat-value">~110M</span><span class="pstat-label">Parameters</span></div>
+            <div class="pstat"><span class="pstat-value">2.2B</span><span class="pstat-label">Train Tokens</span></div>
+            <div class="pstat"><span class="pstat-value">25.016</span><span class="pstat-label">Final PPL</span></div>
           </div>
           <div class="project-actions">
-            <a href="https://github.com/plastma65/luna-zero-vi" target="_blank" rel="noopener" class="project-action">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://huggingface.co/Lozens/Luna-Zero-110M" target="_blank" rel="noopener" class="project-action">
-              <i class="fas fa-cube"></i> Hugging Face
-            </a>
+            <a href="https://github.com/plastma65/luna-zero-vi" target="_blank" rel="noopener" class="project-action"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://huggingface.co/Lozens/Luna-Zero-110M" target="_blank" rel="noopener" class="project-action"><i class="fas fa-cube"></i> Hugging Face</a>
           </div>
         </article>`;
       lunaCard.insertAdjacentHTML("beforebegin", lunaZeroHtml);
@@ -360,18 +336,36 @@
     if (googleCertCard) {
       const status = googleCertCard.querySelector(".cert-status");
       if (status) status.innerHTML = '<i class="fas fa-spinner"></i> 6 / 9 khoá';
-      if (!googleCertCard.querySelector(".course-6-certificate")) {
-        const link = document.createElement("a");
-        link.className = "course-6-certificate";
+
+      const progressFill = googleCertCard.querySelector(".cert-progress-fill, .progress-fill");
+      if (progressFill) progressFill.style.width = "66.7%";
+      const progressText = googleCertCard.querySelector(".cert-progress-percent, .progress-percent");
+      if (progressText) progressText.textContent = "67%";
+
+      const oldLooseLink = googleCertCard.querySelector(".course-6-certificate");
+      if (oldLooseLink) oldLooseLink.remove();
+
+      const course6 = Array.from(googleCertCard.querySelectorAll(".course-item")).find(function (item) {
+        const num = item.querySelector(".course-num");
+        return num && num.textContent.trim() === "06";
+      });
+      if (course6) {
+        course6.classList.remove("pending");
+        course6.classList.add("done");
+
+        const date = course6.querySelector(".course-date");
+        if (date) date.innerHTML = '<i class="fas fa-calendar-check"></i> 07/09/2026';
+
+        let link = course6.querySelector(".course-link");
+        if (!link) {
+          link = document.createElement("a");
+          link.className = "course-link";
+          course6.appendChild(link);
+        }
         link.href = "https://coursera.org/share/42ee829052ffb110e8b21ecc0e398abf";
         link.target = "_blank";
         link.rel = "noopener";
-        link.textContent = "Course 6: Sound the Alarm — certificate";
-        link.style.display = "inline-block";
-        link.style.marginTop = "8px";
-        link.style.color = "var(--neon)";
-        link.style.fontSize = "0.9rem";
-        googleCertCard.appendChild(link);
+        link.innerHTML = '<i class="fas fa-certificate"></i> Xem';
       }
     }
 
@@ -380,7 +374,7 @@
       const path = document.createElement("p");
       path.id = "security-learning-path";
       path.innerHTML =
-        "<strong>Lộ trình hiện tại:</strong> Google Cybersecurity Professional Certificate (6/9; vừa hoàn thành Course 6: Sound the Alarm — Detection and Response), " +
+        "<strong>Lộ trình hiện tại:</strong> Google Cybersecurity Professional Certificate (6/9), " +
         "HTB Academy Junior Cybersecurity Analyst (đang học). Tiếp theo dự kiến: " +
         "Penetration Tester, Web Penetration Tester và AI Red Teaming.";
       learningIntro.appendChild(path);
