@@ -232,6 +232,12 @@
       );
     }
 
+    const linkedinUrl =
+      "https://www.linkedin.com/in/tu%E1%BA%A5n-anh-tr%E1%BA%A7n-930008309/";
+    document.querySelectorAll('a[href*="linkedin.com/in/"]').forEach(function (link) {
+      link.href = linkedinUrl;
+    });
+
     const heroSubtitle = document.querySelector(".hero-subtitle");
     if (heroSubtitle) {
       heroSubtitle.innerHTML = 'Cyber Security Intern · AI / ML<span class="cursor"></span>';
