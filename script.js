@@ -238,11 +238,6 @@
       link.href = linkedinUrl;
     });
 
-    const heroSubtitle = document.querySelector(".hero-subtitle");
-    if (heroSubtitle) {
-      heroSubtitle.innerHTML = 'Cyber Security Intern · AI / ML<span class="cursor"></span>';
-    }
-
     const heroDescription = document.querySelector(".hero-description");
     if (heroDescription) {
       heroDescription.innerHTML =
