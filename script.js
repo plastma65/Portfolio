@@ -335,56 +335,7 @@
       if (sourceLink) sourceLink.href = "https://github.com/plastma65/luna-vi-companion";
     }
 
-    const googleCertCard = Array.from(document.querySelectorAll(".cert-card")).find(function (card) {
-      const title = card.querySelector("h3");
-      return title && title.textContent.includes("Google Cybersecurity Professional Certificate");
-    });
-    if (googleCertCard) {
-      const status = googleCertCard.querySelector(".cert-status");
-      if (status) status.innerHTML = '<i class="fas fa-spinner"></i> 6 / 9 khoá';
-
-      const progressFill = googleCertCard.querySelector(".cert-progress-fill, .progress-fill");
-      if (progressFill) progressFill.style.width = "66.7%";
-      const progressText = googleCertCard.querySelector(".cert-progress-percent, .progress-percent");
-      if (progressText) progressText.textContent = "67%";
-
-      const oldLooseLink = googleCertCard.querySelector(".course-6-certificate");
-      if (oldLooseLink) oldLooseLink.remove();
-
-      const course6 = Array.from(googleCertCard.querySelectorAll(".course-item")).find(function (item) {
-        const num = item.querySelector(".course-num");
-        return num && num.textContent.trim() === "06";
-      });
-      if (course6) {
-        course6.classList.remove("pending");
-        course6.classList.add("done");
-
-        const date = course6.querySelector(".course-date");
-        if (date) date.innerHTML = '<i class="fas fa-calendar-check"></i> 07/09/2026';
-
-        let link = course6.querySelector(".course-link");
-        if (!link) {
-          link = document.createElement("a");
-          link.className = "course-link";
-          course6.appendChild(link);
-        }
-        link.href = "https://coursera.org/share/42ee829052ffb110e8b21ecc0e398abf";
-        link.target = "_blank";
-        link.rel = "noopener";
-        link.innerHTML = '<i class="fas fa-certificate"></i> Xem';
-      }
-    }
-
-    const learningIntro = document.querySelector("#learning .learning-intro");
-    if (learningIntro && !document.getElementById("security-learning-path")) {
-      const path = document.createElement("p");
-      path.id = "security-learning-path";
-      path.innerHTML =
-        "<strong>Lộ trình hiện tại:</strong> Google Cybersecurity Professional Certificate (6/9), " +
-        "HTB Academy Junior Cybersecurity Analyst (đang học). Tiếp theo dự kiến: " +
-        "Penetration Tester, Web Penetration Tester và AI Red Teaming.";
-      learningIntro.appendChild(path);
-    }
+    // Certificate progress and learning path are canonical static content in index.html.
   }
 
   /* ---------- Boot ---------- */
